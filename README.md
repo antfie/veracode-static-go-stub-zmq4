@@ -1,6 +1,6 @@
 # Veracode SAST zmq4-stub
 
-This is a stub implementation of <https://github.com/pebbe/zmq4>. It has been created for use as a replacement to the zmq4 library for use when performing Veracode SAST.
+This is a stub implementation of <https://github.com/pebbe/zmq4>. It has been created for use as a replacement to the zmq4 library for use when performing Veracode SAST. You can see an example usage of this stub here: <https://github.com/antfie/veracode-static-stub-zmq4-example>.
 
 ## Example Script
 
