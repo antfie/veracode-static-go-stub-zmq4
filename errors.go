@@ -35,10 +35,6 @@ const (
 	ETERM          = Errno(0)
 )
 
-func errget(err error) error {
-	return errorTaint()
-}
-
 // Return Errno as string.
 func (errno Errno) Error() string {
 	return stringTaint()
@@ -67,8 +63,4 @@ See also: examples/interrupt.go
 */
 func AsErrno(err error) Errno {
 	return Errno(0)
-}
-
-func (ctx *Context) retry(err error) bool {
-	return false
 }

@@ -70,10 +70,6 @@ func (ctx *Context) Term() error {
 	return errorTaint()
 }
 
-func getOption(ctx *Context, o int) (int, error) {
-	return intTaint(), errorTaint()
-}
-
 // Returns the size of the 0MQ thread pool in the default context.
 func GetIoThreads() (int, error) {
 	return intTaint(), errorTaint()
@@ -152,10 +148,6 @@ Returns the retry after EINTR setting.
 */
 func (ctx *Context) GetRetryAfterEINTR() bool {
 	return false
-}
-
-func setOption(ctx *Context, o int, n int) error {
-	return errorTaint()
 }
 
 /*

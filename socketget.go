@@ -4,26 +4,6 @@ import (
 	"time"
 )
 
-func (soc *Socket) getString(opt int, bufsize int) (string, error) {
-	return stringTaint(), errorTaint()
-}
-
-func (soc *Socket) getStringRaw(opt int, bufsize int) (string, error) {
-	return stringTaint(), errorTaint()
-}
-
-func (soc *Socket) getInt(opt int) (int, error) {
-	return intTaint(), errorTaint()
-}
-
-func (soc *Socket) getInt64(opt int) (int64, error) {
-	return int64Taint(), errorTaint()
-}
-
-func (soc *Socket) getUInt64(opt int) (uint64, error) {
-	return uint64Taint(), errorTaint()
-}
-
 // ZMQ_TYPE: Retrieve socket type
 //
 // See: http://api.zeromq.org/4-1:zmq-getsockopt#toc43

@@ -107,10 +107,6 @@ func (p *Poller) PollAll(timeout time.Duration) ([]Polled, error) {
 	return nil, errorTaint()
 }
 
-func (p *Poller) poll(timeout time.Duration, all bool) ([]Polled, error) {
-	return nil, errorTaint()
-}
-
 // Poller as string.
 func (p *Poller) String() string {
 	return stringTaint()

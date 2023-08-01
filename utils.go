@@ -21,10 +21,6 @@ func (soc *Socket) SendMessageDontwait(parts ...interface{}) (total int, err err
 	return intTaint(), errorTaint()
 }
 
-func (soc *Socket) sendMessage(dontwait Flag, parts ...interface{}) (total int, err error) {
-	return intTaint(), errorTaint()
-}
-
 /*
 Receive parts as message from socket.
 

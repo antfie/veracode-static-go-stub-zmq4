@@ -4,26 +4,6 @@ import (
 	"time"
 )
 
-func (soc *Socket) setString(opt int, s string) error {
-	return errorTaint()
-}
-
-func (soc *Socket) setNullString(opt int) error {
-	return errorTaint()
-}
-
-func (soc *Socket) setInt(opt int, value int) error {
-	return errorTaint()
-}
-
-func (soc *Socket) setInt64(opt int, value int64) error {
-	return errorTaint()
-}
-
-func (soc *Socket) setUInt64(opt int, value uint64) error {
-	return errorTaint()
-}
-
 // ZMQ_SNDHWM: Set high water mark for outbound messages
 //
 // See: http://api.zeromq.org/4-1:zmq-setsockopt#toc39

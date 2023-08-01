@@ -15,74 +15,7 @@ Notable differences in here:
 
 package zmq4_stub
 
-import (
-	"net"
-	"sync"
-)
-
 const CURVE_ALLOW_ANY = "*"
-
-var (
-	auth_handler *Socket
-	auth_quit    *Socket
-
-	auth_init          = false
-	auth_verbose_value = false
-	auth_verbose_lock  sync.RWMutex
-
-	auth_allow     = make(map[string]map[string]bool)
-	auth_deny      = make(map[string]map[string]bool)
-	auth_allow_net = make(map[string][]*net.IPNet)
-	auth_deny_net  = make(map[string][]*net.IPNet)
-
-	auth_users = make(map[string]map[string]string)
-
-	auth_pubkeys = make(map[string]map[string]bool)
-
-	auth_meta_handler = auth_meta_handler_default
-)
-
-func auth_verbose() bool {
-	return false
-}
-
-func auth_verbose_set(value bool) {
-}
-
-func auth_meta_handler_default(version, request_id, domain, address, identity, mechanism string, credentials ...string) (metadata map[string]string) {
-	return map[string]string{}
-}
-
-func auth_isIP(addr string) bool {
-	return false
-}
-
-func auth_is_allowed(domain, address string) bool {
-	return false
-}
-
-func auth_is_denied(domain, address string) bool {
-	return false
-}
-
-func auth_has_allow(domain string) bool {
-	return false
-}
-
-func auth_has_deny(domain string) bool {
-	return false
-}
-
-func auth_do_handler() {
-}
-
-func authenticate_plain(domain, username, password string) bool {
-	return false
-}
-
-func authenticate_curve(domain, client_key string) bool {
-	return false
-}
 
 // Start authentication.
 //
@@ -200,10 +133,6 @@ Returns an error if key is more then 255 characters long.
 */
 func AuthMetaBlob(key, value string) (blob []byte, err error) {
 	return []byte{}, errorTaint()
-}
-
-func auth_meta_blob(name, value string) []byte {
-	return []byte{}
 }
 
 //. Additional functions for configuring server or client socket with a single command
